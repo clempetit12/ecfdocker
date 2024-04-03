@@ -21,6 +21,10 @@ public class SearchSugggestionService {
        return searchSuggestionRepository.findByKeywordStartingWith(prefix);
     }
 
+    public List<SearchSuggestionResponse> getSearchSuggestionList() {
+        return searchSuggestionRepository.findAll();
+    }
+
 
 
 }

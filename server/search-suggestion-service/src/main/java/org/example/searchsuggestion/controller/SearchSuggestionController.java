@@ -28,4 +28,10 @@ public class SearchSuggestionController {
         return new ResponseEntity<>(suggestions, HttpStatus.OK);
     }
 
+    @GetMapping("/search-suggestion")
+    public ResponseEntity<List<SearchSuggestionResponse>> getSearchSuggestionsDefault() {
+        List<SearchSuggestionResponse> suggestions = searchSugggestionService.getSearchSuggestionList();
+        return new ResponseEntity<>(suggestions, HttpStatus.OK);
+    }
+
 }
